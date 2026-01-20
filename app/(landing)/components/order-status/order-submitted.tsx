@@ -4,17 +4,9 @@ import Image from "next/image";
 import Button from "../ui/button";
 import { FiRefreshCw } from "react-icons/fi";
 
-interface OrderSubmittedProps {
-  onRefresh?: () => void;
-}
-
-const OrderSubmitted = ({ onRefresh }: OrderSubmittedProps) => {
+const OrderSubmitted = () => {
   const reloadOrderStatus = () => {
-    if (onRefresh) {
-      onRefresh();
-    } else {
-      window.location.reload();
-    }
+    window.location.reload();
   };
 
   return (
